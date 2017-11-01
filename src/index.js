@@ -10,7 +10,7 @@ import users from "./routes/users";
 import books from "./routes/books";
 
 dotenv.config();
-const port = 8080;
+const port = process.env.PORT || 5000;
 const app = express();
 app.use(bodyParser.json());
 mongoose.Promise = Promise;
