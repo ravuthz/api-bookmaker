@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  const data = { ...req.body.post, userId: req.currentUser._id };
+  const data = { userId: req.currentUser._id, ...req.body.post };
   Post.create(data, (err, post) => responeHandler(err, res, post));
 });
 
@@ -29,7 +29,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  const data = { ...req.body.post, userId: req.currentUser._id };
+  const data = { userId: req.currentUser._id, ...req.body.post };
   Post.findByIdAndUpdate(req.params.id, data, (err, post) => responeHandler(err, res, post));
 });
 
