@@ -1,5 +1,5 @@
 {
-    "extends": ["airbnb", "prettier", "prettier/react"],
+    "extends": ["airbnb", "prettier/react"],
     "plugins": ["prettier"],
     "parser": "babel-eslint",
     "parserOptions": {
@@ -12,6 +12,7 @@
         "node": true
     },
     "rules": {
+        "linebreak-style": ["error", "unix"],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "no-underscore-dangle": [1, { "allow": ["_id"] }]
     }
